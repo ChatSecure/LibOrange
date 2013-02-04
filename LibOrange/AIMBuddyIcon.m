@@ -55,7 +55,7 @@
 		default:
 			break;
 	}
-	return [NSString stringWithFormat:@"<AIMBuddyIcon fmt=%@ dataLength=%lu>", fmtStr, [iconData length]];
+	return [NSString stringWithFormat:@"<AIMBuddyIcon fmt=%@ dataLength=%lu>", fmtStr, (unsigned long)[iconData length]];
 }
 
 - (void)dealloc {

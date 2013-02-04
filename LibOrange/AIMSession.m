@@ -52,7 +52,7 @@
 	if (reqID >= 2147483648) reqID = 2;
 	UInt32 reqIDTep = reqID;
 	[reqIDLock unlock];
-	[Debug log:[NSString stringWithFormat:@"-generateReqID: %d", reqIDTep]];
+	[Debug log:[NSString stringWithFormat:@"-generateReqID: %d", (unsigned int)reqIDTep]];
 	return reqIDTep;
 }
 - (BOOL)writeSnac:(SNAC *)aSnac {

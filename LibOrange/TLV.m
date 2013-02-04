@@ -15,9 +15,11 @@
 @synthesize tlvData;
 
 - (id)initWithData:(NSData *)data {
-	int length = (int)[data length];
-	const char * bytes = (const char *)[data bytes];
-	[self initWithPointer:bytes length:&length];
+    if (self = [super init]) {
+        int length = (int)[data length];
+        const char * bytes = (const char *)[data bytes];
+        [self initWithPointer:bytes length:&length];
+    }
 	return self;
 }
 

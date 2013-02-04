@@ -57,7 +57,7 @@
 	if (statusType == AIMBuddyStatusAway) statusTypeStr = @"Away";
 	else if (statusType == AIMBuddyStatusAvailable) statusTypeStr = @"Available";
 	return [NSString stringWithFormat:@"<%@ msg=\"%@\" idle=%d>", 
-			statusTypeStr, statusMessage, idleTime];
+			statusTypeStr, statusMessage, (unsigned int)idleTime];
 }
 
 - (void)dealloc {

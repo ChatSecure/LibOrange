@@ -305,7 +305,7 @@ char *NewBase64Encode(
 }
 - (NSString *)base64EncodedStringWithNewlines:(BOOL)useNewlines
 {
-	size_t outputLength;
+	size_t outputLength = 0;
 	char *outputBuffer =
 	NewBase64Encode([self bytes], [self length], useNewlines, &outputLength);
 	

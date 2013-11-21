@@ -27,7 +27,7 @@
 		return;
 	} else {
 		AIMFeedbagItem * newItem = [[AIMFeedbagItem alloc] init];
-		newItem.attributes = [NSArray array];
+		newItem.attributes = [NSMutableArray array];
 		newItem.classID = FEEDBAG_DENY;
 		newItem.itemID = [feedbag randomItemID];
 		newItem.groupID = 0;

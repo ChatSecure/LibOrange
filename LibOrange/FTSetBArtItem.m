@@ -38,7 +38,7 @@
 		// update it.
 		AIMFeedbagItem * newItem = [existingBartItem copy];
 		TLV * bartInfoAttr = [[TLV alloc] initWithType:FEEDBAG_ATTRIBUTE_BART_INFO data:bidData];
-		newItem.attributes = [NSArray arrayWithObject:bartInfoAttr];
+		newItem.attributes = [NSMutableArray arrayWithObject:bartInfoAttr];
 		[bartInfoAttr release];
 		SNAC * update = [[SNAC alloc] initWithID:SNAC_ID_NEW(SNAC_FEEDBAG, FEEDBAG__UPDATE_ITEMS) flags:0 requestID:[session generateReqID] data:[newItem encodePacket]];
 		snacs = [[NSArray arrayWithObject:update] retain];
@@ -52,7 +52,7 @@
 		newItem.itemID = [feedbag randomItemID];
 		newItem.itemName = bartType;
 		TLV * bartInfoAttr = [[TLV alloc] initWithType:FEEDBAG_ATTRIBUTE_BART_INFO data:bidData];
-		newItem.attributes = [NSArray arrayWithObject:bartInfoAttr];
+		newItem.attributes = [NSMutableArray arrayWithObject:bartInfoAttr];
 		[bartInfoAttr release];
 		
 		SNAC * insert = [[SNAC alloc] initWithID:SNAC_ID_NEW(SNAC_FEEDBAG, FEEDBAG__INSERT_ITEMS) flags:0 requestID:[session generateReqID] data:[newItem encodePacket]];

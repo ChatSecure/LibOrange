@@ -36,7 +36,7 @@
 	newItem.classID = FEEDBAG_BUDDY;
 	newItem.itemID = [feedbag randomItemID];
 	newItem.itemName = username;
-	newItem.attributes = [NSArray array];
+	newItem.attributes = [NSMutableArray array];
 	AIMFeedbagItem * groupUpdate = [groupItem itemByAddingOrderItem:newItem.itemID];
 	
 	// create SNACs

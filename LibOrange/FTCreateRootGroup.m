@@ -14,7 +14,7 @@
 - (void)createOperationsWithFeedbag:(AIMFeedbag *)feedbag session:(AIMSession *)session {
 	AIMFeedbagItem * rootGroup = [[AIMFeedbagItem alloc] init];
 	TLV * blankOrder = [[TLV alloc] initWithType:FEEDBAG_ATTRIBUTE_ORDER data:[NSData data]];
-	rootGroup.attributes = [NSArray arrayWithObject:blankOrder];
+	rootGroup.attributes = [NSMutableArray arrayWithObject:blankOrder];
 	rootGroup.classID = FEEDBAG_GROUP;
 	rootGroup.groupID = 0;
 	rootGroup.itemID = 0;

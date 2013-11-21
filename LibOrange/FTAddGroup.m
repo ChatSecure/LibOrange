@@ -24,7 +24,7 @@
 	newGroup.classID = FEEDBAG_GROUP;
 	newGroup.itemID = 0;
 	newGroup.groupID = [feedbag randomGroupID];
-	newGroup.attributes = [NSArray arrayWithObject:[[[TLV alloc] initWithType:FEEDBAG_ATTRIBUTE_ORDER data:[NSData data]] autorelease]];
+	newGroup.attributes = [NSMutableArray arrayWithObject:[[[TLV alloc] initWithType:FEEDBAG_ATTRIBUTE_ORDER data:[NSData data]] autorelease]];
 	newGroup.itemName = groupName;
 	AIMFeedbagItem * newRoot = [rootGroup itemByAddingOrderItem:newGroup.groupID];
 	
